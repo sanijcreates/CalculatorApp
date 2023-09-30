@@ -15,7 +15,7 @@
         android:background="#efefef"
         android:padding="15dp"
         android:textSize="48sp"
-        android:text="0"
+        android:text=""
         android:gravity="end|bottom"
         />
     <LinearLayout
@@ -58,7 +58,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="/"
-            android:onClick="onClear"
+            android:onClick="onOperator"
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"/>
     </LinearLayout>
@@ -103,7 +103,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="*"
-            android:onClick="onClear"
+            android:onClick="onOperator"
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"/>
     </LinearLayout>
@@ -148,7 +148,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="+"
-            android:onClick="onClear"
+            android:onClick="onOperator"
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"/>
     </LinearLayout>
@@ -163,11 +163,21 @@
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="0"
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"
             android:onClick="onDigit"
+            />
+        <Button
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="."
+            android:layout_margin="2dp"
+            android:background="@drawable/button_rectangular"
+            android:onClick="onDecimalPoint"
             />
         <Button
             android:id="@+id/btnClear"
@@ -184,7 +194,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onMinus"
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"/>
 
@@ -197,14 +207,14 @@
         android:layout_weight="1"
         >
         <Button
-            android:id="@+id/btnX"
+            android:id="@+id/btnEquals"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="0"
+            android:text="="
             android:layout_margin="2dp"
             android:background="@drawable/button_rectangular"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             />
     </LinearLayout>
 
